@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Portal</title>
+
+    <!-- CDN of Daisy UI,Tailwind CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    /* #btn-primary{
+      display: flex;
+    } */
+
+    .single-news{
+      width: 80%;
+      margin: auto;
+      margin-bottom: 24px;
+    }
+  </style>
+  <body>
+    <header>
+      <div id="catagory-bar-container" class="bg-slate-500 text-center p-2 flex gap-5 justify-center">
+        
+      </div>
+    </header>
+    <main class="container mx-auto mt-10">
+      <section class="text-center">
+        <input
+          class="w-1/2 border-2 px-3 py-2"
+          type="text"
+          placeholder="type something..."
+        />
+        <button class="bg-red-200 px-3 py-2 text-black font-medium">
+          Search
+        </button>
+      </section>
+
+      <section class="mt-10">
+        <div id="news-container">
+
+        </div>
+      </section>
+    </main>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
