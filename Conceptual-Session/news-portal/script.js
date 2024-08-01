@@ -21,6 +21,7 @@ const loadCatagory = async() => {
 
 
 const loadNews = async(newsId) => {
+  document.getElementById('loading-spiner').style.display = 'block';
     const response = await fetch(`https://openapi.programming-hero.com/api/news/category/${newsId}`);
     const data = await response.json();
     const news = data.data;
@@ -30,6 +31,7 @@ const loadNews = async(newsId) => {
     newContainer.textContent = '';
 
     news.forEach((news) => {
+      document.getElementById('loading-spiner').style.display = 'none'
         const div = document.createElement('div');
         div.classList.add('single-news');
         div.innerHTML = `
@@ -76,12 +78,14 @@ const loadNews = async(newsId) => {
 const handleSearch = () => {
   const textValue = document.getElementById('input-box');
   const value = textValue.value;
-  if (value) {
-    
-  }
-  else{
-    alert('WARNING! Enter Valid Value')
-  }
+  // if (value) {
+  //   loadNews(value)
+  // }
+  // else{
+  //   alert('WARNING! Enter Valid Value')
+  // }
+
+  value?loadNews(value): 'Invalid value';
 
   textValue.value = ''
 }
